@@ -15,27 +15,27 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">MH Perfume Shop</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">About</a></li> 
-      <li><a href="#">Contact</a></li> 
-    </ul>
-  </div>
-</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">MH Perfume Shop</a>
+	    </div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#">Shop</a></li>
+	      <li><a href="static_pages/about.html">About</a></li> 
+	      <li><a href="static_pages/contact.html">Contact</a></li> 
+	    </ul>
+	  </div>
+	</nav>
 
-<%= image_tag("jeanniesm.jpg", class: "img-responsive") %>
+	<%= image_tag("jeanniesm.jpg", class: "img-responsive") %>
 
-<%= yield %>
+	<%= yield %>
 
-<footer>
-  <div class="feet">&copy; 2016 Perfume Shop</div>
-</footer>
+	<footer>
+	  <div class="feet">&copy; 2016 Perfume Shop</div>
+	</footer>
 
 </body>
 </html>
