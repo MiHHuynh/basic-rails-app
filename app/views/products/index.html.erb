@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>PRODUCTS</h1>
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row product-row">
     <% @products.each do |product| %>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <%= image_tag(product.image_url, class: "img-responsive") %>
         Name: <%= product.name %> <br>
         Description: <%= product.description %> <br>
@@ -17,6 +17,7 @@
   </div>
 </div>
 
+<br><br><hr>
 
 <table>
   <thead>

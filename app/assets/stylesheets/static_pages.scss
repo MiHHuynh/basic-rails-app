@@ -2,14 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-	color: red;
-}
-
 body {
 	padding-top: 50px;
 }
+
 .feet {
 	background-color: black;
 	color: white;
+}
+
+.product-row {
+	padding: 0 15px;
 }
