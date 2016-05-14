@@ -2,6 +2,22 @@
 
 <h1>Listing Products</h1>
 
+<div class="container-fluid">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="md-col-3">
+        <%= image_tag(product.image_url, class: "img-responsive") %>
+        Name: <%= product.name %> <br>
+        Description: <%= product.description %> <br>
+        <%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
 <table>
   <thead>
     <tr>
