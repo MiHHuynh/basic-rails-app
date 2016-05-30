@@ -1,13 +1,16 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
+  <% counter=0 %>
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  <% @products.each do |product| %>
+    <li data-target="#carousel-example-generic" data-slide-to="<%= counter %>" class="active"></li>
+    <% counter += 1%>
+  <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+    <% counter=0 %>
 	<% @products.each do |product| %>
 		<div class="item<%= " active" if product == @products.first %>">
 			<%= image_tag(product.image_url) %>
@@ -15,7 +18,7 @@
 				<%= product.name %>
 			</div>
 		</div>
-	<%end %>
+	<% end %>
   </div>
 
   <!-- Controls -->

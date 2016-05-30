@@ -1,2 +1,32 @@
-<h1 class="contact-header">Contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<div class="container contact-container">
+	<h1 class="contact-header">Contact Us</h1>
+	<hr>
+	<form>
+		<fieldset class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name">
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="email">Email</label>
+			<input type="email" class="form-control" id="email">
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="type-of-inquiry">Type of Inquiry</label>
+			<select class="form-control" id="type-of-inquiry">
+				<option>General</option>
+				<option>Your Order</option>
+				<option>Sales</option>
+				<option>Troubleshooting</option>
+				<option>Product Description</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<label for="description">What can we help you with?</label>
+			<textarea class="form-control" id="description" rows="6"></textarea>
+		</fieldset>
+		<br>
+		<button type="submit" class="btn">Submit</button>
+	</form>
+
+	<hr>
+</div>
