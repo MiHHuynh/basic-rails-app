@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+/*   TYPOGRAPHY   */
+
+.navbar, .nav > li, .about-container, .about-p, .contact-container, .new-product-header, .edit-product-header {
+	font-family: 'Alegreya SC', sans-serif;
+}
+
+.navbar-default .navbar-nav > li > a, .about-p {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 100;
+}
