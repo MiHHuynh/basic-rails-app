@@ -56,3 +56,5 @@ end
 
 #gem for authentication
 gem 'devise'
+
+ruby '2.2.4'
