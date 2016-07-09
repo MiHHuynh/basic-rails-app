@@ -17,8 +17,13 @@
 
 </head>
 <body>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	<% if notice %>
+		<p class="notice alert alert-info" role="alert"><%= notice %></p>
+	<% end %>
+
+	<% if alert %>
+		<p class="alert alert-warning" role="alert"><%= alert %></p>
+	<% end %>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
