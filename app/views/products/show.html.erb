@@ -1,29 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container product-container">
+  <hr>
+  <h2 class="product-show-title"><%= @product.name %></h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <%= image_tag(@product.image_url, class: "img-responsive") %>
+    </div>
+    <div class="col-md-6">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href='#description'>Description</a></li>
+        <li><a data-toggle="tab" href="#reviews">Reviews</a>
+      </ul>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <div class="tab-content">
+        <div id="description" class="tab-pane fade in active">
+          <h3>PRODUCT DESCRIPTION</h3>
+          <p><%= @product.description %></p>          
+        </div>
+        <div id="reviews" class="tab-pane fade">
+          <h3>Customer Reviews</h3>
+          <p>Comment Body</p>
+        </div>
+      </div>
+      <hr>
+      <p class="product-price">$<%= @product.price %></p>
+      <button class="add-to-cart">Add to Cart</button>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-	<strong>Colour:</strong>
-	<%= @product.colour %>
-</p>
-
-<p>
-	<strong>Price:</strong>
-	<%= @product.price %>
-</p>
+    </div> <!--end col-->
+  </div> <!--end row-->
+</div> <!--end container-->
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
