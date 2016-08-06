@@ -23,7 +23,7 @@
           <h3>Customer Reviews</h3> Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
           <%= render 'new_comment.html.erb' %>
           <%= render 'comments.html.erb' %>
-          <%= Comment.paginate(:page => params[:page], :per_page => 5) %>
+          <!-- <%= # Comment.paginate(:page => params[:page], :per_page => 5) %> -->
           <%= will_paginate @comments %>          
         </div>
       </div>
