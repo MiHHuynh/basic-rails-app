@@ -15,19 +15,21 @@
       </ul>
 
       <div class="tab-content">
+
         <div id="description" class="tab-pane fade in active">
           <h3>PRODUCT DESCRIPTION</h3>
           <p><%= @product.description %></p>          
         </div>
+
         <div id="reviews" class="tab-pane fade">
           <h3>Customer Reviews</h3> Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
           <%= render 'new_comment.html.erb' %>
           <%= render 'comments.html.erb' %>
-          <!-- <%= # Comment.paginate(:page => params[:page], :per_page => 5) %> -->
           <%= will_paginate @comments %>          
         </div>
+
       </div>
-      <hr>
+
       <p class="product-price">$<%= @product.price %></p>
       <button class="add-to-cart">Add to Cart</button>
 
