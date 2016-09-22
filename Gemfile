@@ -7,7 +7,7 @@ gem 'rails', '4.2.6'
 
 group :development, :test do
 	gem 'sqlite3'
-    gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 # Use SCSS for stylesheets
@@ -62,3 +62,6 @@ gem 'cancancan', '~> 1.10'
 # ruby '2.3.0'
 
 gem 'will_paginate', '~> 3.1.0'
+
+# for functional tests
+gem 'rails-controller-testing'
