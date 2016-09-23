@@ -5,7 +5,7 @@ describe Product do
 
 		before do
   			@product = Product.create!(name: "Possets Lavender Pepys", image_url: "http://i.imgur.com/hPFhIlQ.jpg", price: "5")
-  			@user = User.create!(email: "test@test.com", password: "password1", first_name: "testname", last_name: "testlastname")
+  			@user = FactoryGirl.create(:user)
   			@product.comments.create!(rating: 1, user: @user, body: "smells bad")
   			@product.comments.create!(rating: 3, user: @user, body: "not bad but goes dusty")
   			@product.comments.create!(rating: 5, user: @user, body: "best thing I've ever smelled")
