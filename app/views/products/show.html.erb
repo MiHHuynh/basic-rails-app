@@ -18,7 +18,7 @@
 
         <div id="description" class="tab-pane fade in active">
           <h3>PRODUCT DESCRIPTION</h3>
-          <p><%= @product.description %></p>          
+          <p><%= @product.description %></p>      
         </div>
 
         <div id="reviews" class="tab-pane fade">
@@ -31,7 +31,10 @@
       </div>
 
       <p class="product-price">$<%= @product.price %></p>
-      <button class="add-to-cart">Add to Cart</button>
+      <!-- <button class="add-to-cart">Add to Cart</button> -->
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>    
 
     </div> <!--end col-->
   </div> <!--end row-->
