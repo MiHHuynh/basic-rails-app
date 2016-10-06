@@ -1,5 +1,5 @@
-	<%= image_tag(product.image_url, class: "img-responsive") %> <br>
-	<strong><%= product.name %></strong> <br>
+	<%= link_to image_tag(product.image_url, class: "img-responsive"), product %><br>
+	<strong><%= link_to product.name, product %></strong> <br>
 	<%= product.description %> <br>
 	<hr>
 	$<%= product.price %> <br>
