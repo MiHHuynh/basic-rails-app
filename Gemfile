@@ -72,3 +72,6 @@ gem 'stripe'
 
 # for caching with Memcached on heroku
 gem 'dalli'
+
+# redis
+gem 'redis-rails'
