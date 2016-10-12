@@ -1,5 +1,6 @@
-$(document).on('ready page:load ajaxSuccess', function(){
-    refreshRating();
+$(document).on('turbolinks:load ajaxSuccess', function() {
+  // JavaScript in here will be loaded when the page is ready
+	refreshRating();
     $('.image-zoom').elevateZoom();
 });
 
