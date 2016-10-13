@@ -1,4 +1,4 @@
-$(document).on('ready page:load ajaxSuccess', function(){
+$(document).on('turbolinks:load ajaxSuccess', function() {
     refreshRating();
     $('.image-zoom').elevateZoom();
 });
