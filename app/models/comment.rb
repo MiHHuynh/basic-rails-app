@@ -7,6 +7,6 @@ class Comment < ActiveRecord::Base
   validates :product, presence: true
   validates :rating, numericality: { only_integer: true }
 
-  # self.per_page = 5
+  after_create_commit { CommentUpdateJob.perform_later(self, @user) }
 
 end
