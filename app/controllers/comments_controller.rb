@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
 		@product = Product.find(params[:product_id])
 		@comment = @product.comments.create(comment_params)
 		@comment.user = current_user
+		@user = current_user
 		respond_to do |format|
 			if @comment.save
 				format.html { redirect_to @product, notice: "Review has been submitted successfully." }
