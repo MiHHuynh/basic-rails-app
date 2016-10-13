@@ -1,4 +1,9 @@
 Rails.application.configure do
+
+  # By default Rails will generate the JavaScript part of ActionCable as .coffee CoffeeScript files. 
+  # Turn off and use normal JS
+  config.app_generators.javascript_engine = :javascript
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
