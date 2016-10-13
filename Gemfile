@@ -64,7 +64,9 @@ end
 # end
 
 group :production do
-	gem 'rails_12factor'
+	# no longer needed with rails 5
+  # gem 'rails_12factor'
+
 	gem 'pg'
 end
 
