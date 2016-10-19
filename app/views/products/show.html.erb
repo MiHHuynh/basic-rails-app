@@ -34,7 +34,7 @@
       <p class="product-price">$<%= @product.price %></p>
       <!-- <button class="add-to-cart">Add to Cart</button> -->
       <%= hidden_field_tag(:product_id, @product.id) %>
-      <%= form_tag "/payments/create" do %>
+      <%= form_tag payments_path do %>
         <%= render partial: "shared/stripe_checkout_button" %>
       <% end %>
 

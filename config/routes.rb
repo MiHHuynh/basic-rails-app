@@ -22,7 +22,8 @@ Rails.application.routes.draw do
 
   # Route for orders
   resources :orders, only: [:index, :show, :create, :destroy]
-
+  resources :payments, only: [:create]
+  
   mount ActionCable.server => '/cable'
 
   # Example of regular route:
