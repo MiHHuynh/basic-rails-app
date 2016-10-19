@@ -4,7 +4,12 @@ $(document).on('turbolinks:load ajaxSuccess', function() {
 });
 
 var refreshRating = function() {
-    $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+    //$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+    $('.rating').raty ( { 
+    	starHalf: '<%= image_path('star-half.png') %>',
+    	starOff: '<%= image_path('star-off.png') %>',
+    	starOn: '<%= image_path('star-on.png') %>',
+    	scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
         readOnly: true,
         score: function() {
