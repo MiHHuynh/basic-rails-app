@@ -1,11 +1,11 @@
-<% cache product do %>
-	<%= link_to image_tag(product.image_url, class: "img-responsive"), product %><br>
-	<strong><%= link_to product.name, product %></strong> <br>
-	<%= product.description %> <br>
-	<hr>
-	$<%= product.price %> <br>
-	<%= link_to 'Show', product %> | 
-	<%= link_to 'Edit', edit_product_path(product) %> | 
-	<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+	<% cache product do %>
+		<%= link_to image_tag(product.image_url, class: "img-responsive"), product %><br>
+		<strong><%= link_to product.name, product %></strong> <br>
+		<%= product.description %> <br>
+		<hr>
+		$<%= product.price %> <br>
+		<%= link_to 'Show', product %> | 
+		<%= link_to 'Edit', edit_product_path(product) %> | 
+		<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
 </div>
